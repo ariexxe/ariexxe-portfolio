@@ -1,0 +1,88 @@
+.projects-section {
+    background-color: black;
+    color: white;
+    padding: 5rem 0;
+  }
+  
+  .projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .projects-title {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .projects-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .project-card {
+    background-color: #1f2937; /* gray-800 */
+    padding: 2rem;
+    border-radius: 3rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.1);
+  }
+  
+  .project-image {
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 12rem; /* h-48 */
+    object-fit: cover;
+  }
+  
+  .project-name {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-tech {
+    color: #9ca3af; /* gray-400 */
+    margin-bottom: 1rem;
+  }
+  
+  .project-link {
+    display: inline-block;
+    background: linear-gradient(to right, #3b82f6, #b82b71);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px; /* rounded-full */
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-top: 1rem; /* Add spacing above the button */
+    width: 100%; /* Makes the button fill the width of its container */
+    max-width: 200px; /* Optional: Limit the maximum width */
+    text-align: center; 
+  }
+  
+  .project-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.1);
+  }

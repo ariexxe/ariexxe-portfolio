@@ -1,0 +1,72 @@
+.hero {
+    background-color: black;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .hero img {
+    margin: 0 auto 2rem auto;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .hero img:hover {
+    transform: scale(1.05);
+  }
+  
+  .hero h1 {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: bold;
+  }
+  
+  .hero .highlight {
+    background: linear-gradient(to right, #48bb78, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .hero p {
+    margin-top: 1rem;
+    font-size: 1.125rem; /* text-lg */
+    color: #d1d5db; /* text-gray-300 */
+    padding: 0 1rem;
+  }
+  
+  .hero .buttons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .hero .buttons a {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    transition: transform 0.3s ease;
+  }
+  
+  .hero .contact-button {
+    background: linear-gradient(to right, #48bb78, #3b82f6);
+    color: white;
+    border: none;
+  }
+  
+  .hero .contact-button:hover {
+    transform: scale(1.05);
+  }
+  
+  .hero .resume-button {
+     background: linear-gradient(to right, #3b82f6, #b82b71);
+    color: white;
+    border: none;
+  }
+  
+  .hero .resume-button:hover {
+    transform: scale(1.05);
+  }

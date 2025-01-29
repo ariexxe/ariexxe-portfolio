@@ -1,0 +1,62 @@
+.navbar {
+    background-color: rgba(0, 0, 0, 0.993);
+    color: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .navbar .container {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navbar .container.md-justify-between {
+    justify-content: space-between;
+  }
+  
+  .navbar .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    display: none; /* Hide on small screens */
+  }
+  
+  .navbar .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .navbar .nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .nav-links a:hover {
+    color: #b82b71;
+  }
+  
+  .navbar .connect-button {
+    background: linear-gradient(to right, #b82b71, #3b82f6);
+    color: white;
+    display: none; /* Hide on small screens */
+    transition: transform 0.3s ease;
+    transform: scale(1);
+    padding: 0.5rem 1rem;
+    border-radius: 9999px; /* Rounded full */
+  }
+  
+  .navbar .connect-button:hover {
+    transform: scale(1.05);
+  }
+  
+  @media (min-width: 768px) {
+    .navbar .logo {
+      display: inline-block; /* Show on medium and large screens */
+    }
+    .navbar .connect-button {
+      display: inline-block; /* Show on medium and large screens */
+    }
+  }
