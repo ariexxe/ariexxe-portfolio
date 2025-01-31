@@ -12,6 +12,7 @@ import { FaEnvelope, FaPhone, FaMapMarkedAlt, FaFacebook, FaGithub, FaInstagram,
 
 const Homepage = () => {
   const [showButton, setShowButton] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);  // Added for hamburger menu state
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,18 +26,24 @@ const Homepage = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div>
       {/* Navbar */}
       <motion.nav 
         className="navbar" 
         id="home"
-        animate={{ y: 0 }}
-        transition={{ duration: 0 }}
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
       >
         <div className="container md-justify-between">
           <div className="logo">Ari</div>
-          <div className="nav-links">
+          <div className={`nav-links ${isOpen ? 'active' : ''}`}>
             <a href="">Home</a>
             <a href="#about">About Me</a>
             <a href="#services">Services</a>
@@ -44,8 +51,13 @@ const Homepage = () => {
             <a href="#contact_me">Contacts</a>
           </div>
           <button className="connect-button">Connect with me</button>
+          <div className="hamburger" onClick={toggleMenu}>
+            <div className="line"></div>
+            <div className="line"></div>
+            <div className="line"></div>
+          </div>
         </div>
-        </motion.nav>
+      </motion.nav>
 
       {/* Hero Section */}
       <motion.div 
@@ -85,19 +97,17 @@ const Homepage = () => {
           <a href="#contacts" className="contact-button">Contact Me</a>
           <a href="#resume" className="resume-button">Resume</a>
           {showButton && (
-        <motion.button
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="back-to-top-button"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.3 }}
-          whileHover={{ scale: 1.1 }}
-        >
-          <FaArrowUp size={20} />
-        </motion.button>
-      )}
-
-      
+            <motion.button
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="back-to-top-button"
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3 }}
+              whileHover={{ scale: 1.1 }}
+            >
+              <FaArrowUp size={20} />
+            </motion.button>
+          )}
         </motion.div>
       </motion.div>
 
@@ -161,7 +171,7 @@ const Homepage = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
-                {[
+                {[ 
                   { value: "3+", label: "Years of Experience" },
                   { value: "10+", label: "Happy Clients" },
                   { value: "20+", label: "Projects Completed" }
@@ -183,7 +193,6 @@ const Homepage = () => {
           </div>
         </div>
       </motion.div>
-
       {/* Services Section */}
       <motion.div 
         className="services-section" 
