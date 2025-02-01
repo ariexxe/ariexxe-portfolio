@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from 'framer-motion';
 import { FaArrowUp } from "react-icons/fa";
 import "./Homepage.css";
+import Navbar from '../../components/A - Navbar/Navbar.jsx'
 import Profile from "../../assets/Profile.jpg";
 import AboutImage from "../../assets/Aboutme.jpg";
 import ProjectOne from "../../assets/Streetstyleapp.png";
@@ -33,31 +34,7 @@ const Homepage = () => {
 
   return (
     <div>
-      {/* Navbar */}
-      <motion.nav 
-        className="navbar" 
-        id="home"
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-      >
-        <div className="container md-justify-between">
-          <div className="logo">Ari</div>
-          <div className={`nav-links ${isOpen ? 'active' : ''}`}>
-            <a href="">Home</a>
-            <a href="#about">About Me</a>
-            <a href="#services">Services</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact_me">Contacts</a>
-          </div>
-          <button className="connect-button">Connect with me</button>
-          <div className="hamburger" onClick={toggleMenu}>
-            <div className="line"></div>
-            <div className="line"></div>
-            <div className="line"></div>
-          </div>
-        </div>
-      </motion.nav>
+      <Navbar/>
 
       {/* Hero Section */}
       <motion.div 

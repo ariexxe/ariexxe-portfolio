@@ -8,7 +8,7 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  return(
+  return (
     <nav className="navbar">
       <div className="container md-justify-between">
         <div className="logo">Ari</div>
@@ -23,11 +23,17 @@ const Navbar = () => {
 
         <button className="connect-button" id="contact">Connect with me</button>
 
-        <div className="hamburger" onClick={toggleMenu}>
-          <div className="line"></div>
-          <div className="line"></div>
-          <div className="line"></div>
-        </div>
+        <input 
+          type="checkbox" 
+          id="checkbox" 
+          checked={isOpen} 
+          onChange={toggleMenu} 
+        />
+        <label className={`toggle ${isOpen ? 'active' : ''}`} htmlFor="checkbox">
+          <div className="bars" id="bar1"></div>
+          <div className="bars" id="bar2"></div>
+          <div className="bars" id="bar3"></div>
+        </label>
       </div>
     </nav>
   );

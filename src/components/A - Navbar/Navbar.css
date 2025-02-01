@@ -53,22 +53,73 @@
   transform: scale(1.05);
 }
 
-.hamburger {
+/* Hamburger toggle animation */
+#checkbox {
   display: none;
+}
+
+.toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: none; /* Hidden by default */
   flex-direction: column;
-  gap: 5px;
-  z-index: 1001;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition-duration: 0.5s;
 }
 
-.hamburger .line {
-  width: 30px;
-  height: 3px;
-  background-color: white;
-  border-radius: 2px;
-  transition: all 0.3s ease;
+.bars {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #3b82f6, #b82b71);
+  border-radius: 4px;
 }
 
+#bar2 {
+  transition-duration: 0.8s;
+}
+
+#bar1, #bar3 {
+  width: 70%;
+}
+
+#checkbox:checked + .toggle .bars {
+  position: absolute;
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar2 {
+  transform: scaleX(0);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar1 {
+  width: 100%;
+  transform: rotate(45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar3 {
+  width: 100%;
+  transform: rotate(-45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle {
+  transition-duration: 0.5s;
+  transform: rotate(180deg);
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
+  /* Make burger visible on mobile */
+  .toggle {
+    display: flex; /* Show the hamburger only on mobile */
+  }
+
   .nav-links {
     position: fixed;
     top: 80px !important;
@@ -92,19 +143,8 @@
     display: none;
   }
 
+  /* Ensure hamburger button is hidden in desktop view */
   .hamburger {
-    display: flex;
-  }
-
-  .hamburger.active .line:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
-  }
-
-  .hamburger.active .line:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active .line:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
+    display: none;
   }
 }
