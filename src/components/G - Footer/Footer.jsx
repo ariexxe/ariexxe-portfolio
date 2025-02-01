@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css"
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaTiktok, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaGoogle, FaInstagram, FaLinkedin, FaTiktok, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
     return (
@@ -33,22 +33,22 @@ const Footer = () => {
                     &copy; {new Date().getFullYear()} Ari. All rights reserved.
                 </p>
                 <div className="footer-socials">
-                    <a href="#" className="footer-icon">
+                    <a href="https://www.facebook.com/princess.manatiga" className="footer-icon" target="_blank" rel="noopener noreferrer">
                         <FaFacebook />
                     </a>
-                    <a href="#" className="footer-icon">
+                    <a href="https://www.tiktok.com/@arie_xxe" className="footer-icon" target="_blank" rel="noopener noreferrer">
                         <FaTiktok />
                     </a>
-                    <a href="#" className="footer-icon">
+                    <a href="https://www.instagram.com/arie_xxe/" className="footer-icon" target="_blank" rel="noopener noreferrer">
                         <FaInstagram />
-                    </a>
-                    <a href="#" className="footer-icon">
-                        <FaLinkedin />
-                    </a>
-                    <a href="#" className="footer-icon">
+                    </a>                    
+                    <a href="https://x.com/arie_xxe" className="footer-icon" target="_blank" rel="noopener noreferrer">
                         <FaTwitter />
                     </a>
-                    <a href="#" className="footer-icon">
+                    <a href="https://mail.google.com/mail/u/1/#inbox" className="footer-icon" target="_blank" rel="noopener noreferrer">
+                        <FaGoogle/>
+                    </a>
+                    <a href="https://github.com/ariexxe" className="footer-icon" target="_blank" rel="noopener noreferrer">
                         <FaGithub />
                     </a>
                 </div>

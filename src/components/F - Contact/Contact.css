@@ -1,13 +1,19 @@
+html, body {
+  overflow-x: hidden;
+}
+
 .contact-section {
     background-color: #000;
     color: #fff;
     padding: 5rem 0;
+    width: 100vw;
+    overflow: hidden;
   }
   
   .contact-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
   
   .contact-title {
@@ -20,8 +26,10 @@
   
   .contact-content {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap; /* Ensures content wraps properly */
+    justify-content: space-between;
     gap: 2rem;
+    width: 100%; /* Ensures it does not exceed the container */
   }
   
   @media (min-width: 768px) {

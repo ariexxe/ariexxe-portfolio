@@ -1,3 +1,7 @@
+html, body {
+  overflow-x: hidden;
+}
+
 .footer {
   background-color: #333;
   color: #fff;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from 'framer-motion';
-import { FaArrowUp } from "react-icons/fa";
+import { FaArrowUp, FaGoogle } from "react-icons/fa";
 import "./Homepage.css";
 import Navbar from '../../components/A - Navbar/Navbar.jsx'
 import Profile from "../../assets/Profile.jpg";
@@ -350,16 +350,18 @@ const Homepage = () => {
           </p>
           <div className="footer-socials">
             {[
-              { Icon: FaFacebook, href: "#" },
-              { Icon: FaTiktok, href: "#" },
-              { Icon: FaInstagram, href: "#" },
-              { Icon: FaLinkedin, href: "#" },
-              { Icon: FaTwitter, href: "#" },
-              { Icon: FaGithub, href: "#" }
+              { Icon: FaFacebook, href: "https://www.facebook.com/princess.manatiga"  },
+              { Icon: FaTiktok, href: "https://www.tiktok.com/@arie_xxe" },
+              { Icon: FaInstagram, href: "https://www.instagram.com/arie_xxe/" },
+              { Icon: FaTwitter, href: "https://x.com/arie_xxe" },
+              { Icon: FaGoogle, href: "https://mail.google.com/mail/u/1/#inbox" },
+              { Icon: FaGithub, href: "https://github.com/ariexxe" }
             ].map(({ Icon, href }, index) => (
               <motion.a 
                 key={index}
                 href={href} 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="footer-icon"
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}

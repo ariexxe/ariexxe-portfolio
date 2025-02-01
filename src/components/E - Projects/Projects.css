@@ -1,3 +1,7 @@
+html, body {
+  overflow-x: hidden;
+}
+
 .projects-section {
     background-color: black;
     color: white;
