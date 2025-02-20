@@ -5,35 +5,43 @@ import ProjectOne from '../../assets/Streetstyleapp.png';
 import ProjectTwo from '../../assets/Socialmediawebsite.png';
 import ProjectThree from '../../assets/Coresite.png';
 import ProjectFour from '../../assets/Milkinside.png';
+import ProjectFive from '../../assets/Coresite Website.png';
 
 const projects = [
   {
     id: 1,
-    name: "Street Style (E-commerce App)",
+    name: "Street Style (E-commerce App Design)",
     technologies: "Figma",
     image: ProjectOne,
     figma: "https://www.figma.com/design",
   },
   {
     id: 2,
-    name: "School Social Website (School project)",
+    name: "School Social Website (Design)",
     technologies: "Figma",
     image: ProjectTwo,
     figma: "https://www.figma.com/design",
   },
   {
     id: 3,
-    name: "CoreSite Website (Service Website)",
+    name: "CoreSite Website (Service Website Design)",
     technologies: "Figma",
     image: ProjectThree,
     figma: "https://www.figma.com/design",
   },
   {
     id: 4,
-    name: "Milkinside Website (Service Website)",
+    name: "Milkinside Website (Service Website Design)",
     technologies: "Figma",
     image: ProjectFour,
     figma: "https://www.figma.com/design",
+  },
+  {
+    id: 5,
+    name: "CoreSite (Fully Developed Website)",
+    technologies: "Github",
+    image: ProjectFive,
+    figma: "https://ariexxe.github.io/coresite-website-react/",
   },
 ];
 
@@ -68,7 +76,7 @@ const Projects = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Figma
+                Check it out!
               </a>
             </motion.div>
           ))}

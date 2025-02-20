@@ -144,3 +144,20 @@ html, body {
     background: linear-gradient(to right, #3b82f6, #b82b71);
    
   }
+
+  .success-message {
+    color: #4caf50;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.error-message {
+    color: #f44336;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.submit-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}

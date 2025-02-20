@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.css"
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaPhone, FaMapMarkedAlt } from "react-icons/fa";
